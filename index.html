@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Invoice & Report Creator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row mt-2">
+            <div class="col-12 p-4">
+                <div class="card">
+                    <div class="card-header card-header-top">
+                        <h3>Report & Invoice</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-2 p-0">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <p> Category*</p>
+                                        <div class="form-group d-flex">
+                                            <select class="form-control form-control-sm mr-1" id="category">
+                                                <option></option>
+                                                <option>Category 1</option>
+                                                <option>Category 2</option>
+                                                <option>Category 3</option>
+                                            </select>
+                                            <button class="btn btn-secondary btn-sm mr-1"><i
+                                                    class="fa-solid fa-floppy-disk"></i></button>
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fa-solid fa-x"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body card-body-inside">
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">00.Invoice</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">01.Bill-To</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">02.Ship-To</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">03.Credit-Card</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">04.Products</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">05.Deposits</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">06.Totals</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">07.Instructions</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">08.Notes</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2 p-0">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <p> Fields*</p>
+                                        <div class="form-group d-flex">
+                                            <select class="form-control form-control-sm mr-1" id="category">
+                                                <option></option>
+                                                <option>Field 1</option>
+                                                <option>Field 2</option>
+                                                <option>Field 3</option>
+                                            </select>
+                                            <button class="btn btn-secondary btn-sm mr-1"><i
+                                                    class="fa-solid fa-floppy-disk"></i></button>
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fa-solid fa-x"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body card-body-inside">
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">00.[Invoice] Number</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">01.[Invoice] Date-In</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">02.[Invoice] Date-Due</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">03.[Invoice] Date-Out</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">04.[Invoice] Deposit-Dates</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">05.[Invoice] Order-Status</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">06.[Invoice] Name-Conference</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">07.[Invoice] Address</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">08.[Invoice] Cite.State.Zip</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">09.[Invoice] Phone</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">10.[Invoice] Fax Number</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">11.[Invoice] Treas. Phone</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">12.[Invoice] Treas. Fax</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <p>Status*</p>
+                                        <div class="form-group d-flex">
+                                            <select class="form-control form-control-sm mr-1" id="category">
+                                                <option></option>
+                                                <option>Field 1</option>
+                                                <option>Field 2</option>
+                                                <option>Field 3</option>
+                                            </select>
+                                            <button class="btn btn-secondary btn-sm mr-1"><i
+                                                    class="fa-solid fa-floppy-disk"></i></button>
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fa-solid fa-x"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body card-body-inside">
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">00.QUO [Quote] Pending</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">01.REA [Ready] Pending</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">02.ORD [Ordering] Pending</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">03.PRO [Production] Peding</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">04.SHI [Shipped] Monthly</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">05.DEL [Delivered] Monthly</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">06.PIC [Picked Up] Monthly</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">07.RET [Returning] Pending</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">08.CAN [Canceled] Monthly</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">09.REF [Refunded] Monthly</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">10.CRE [Credited]] Monthly</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2 p-0">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <p> Product*</p>
+                                        <div class="form-group d-flex">
+                                            <select class="form-control form-control-sm mr-1" id="category">
+                                                <option></option>
+                                                <option>Field 1</option>
+                                                <option>Field 2</option>
+                                                <option>Field 3</option>
+                                            </select>
+                                            <button class="btn btn-secondary btn-sm mr-1"><i
+                                                    class="fa-solid fa-floppy-disk"></i></button>
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fa-solid fa-x"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body card-body-inside">
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">00.[Invoice] Number</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">01.[Invoice] Date-In</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">02.[Invoice] Date-Due</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">03.[Invoice] Date-Out</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">04.[Invoice] Deposit-Dates</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">05.[Invoice] Order-Status</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">06.[Invoice] Name-Conference</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">07.[Invoice] Address</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">08.[Invoice] Cite.State.Zip</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">09.[Invoice] Phone</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">10.[Invoice] Fax Number</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">11.[Invoice] Treas. Phone</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">12.[Invoice] Treas. Fax</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 p-0">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <p> Columns*</p>
+                                        <div class="form-group d-flex">
+                                            <select class="form-control form-control-sm mr-1" id="category">
+                                                <option></option>
+                                                <option>Field 1</option>
+                                                <option>Field 2</option>
+                                                <option>Field 3</option>
+                                            </select>
+                                            <button class="btn btn-secondary btn-sm mr-1"><i
+                                                    class="fa-solid fa-floppy-disk"></i></button>
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fa-solid fa-x"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body card-body-inside">
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">00.[Invoice] Number</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">01.[Invoice] Date-In</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">02.[Invoice] Date-Due</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">03.[Invoice] Date-Out</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">04.[Invoice] Deposit-Dates</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">05.[Invoice] Order-Status</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">06.[Invoice] Name-Conference</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">07.[Invoice] Address</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">08.[Invoice] Cite.State.Zip</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">09.[Invoice] Phone</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">10.[Invoice] Fax Number</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">11.[Invoice] Treas. Phone</label>
+                                        </div>
+                                        <div class="form-check mb-2 mr-sm-2">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">12.[Invoice] Treas. Fax</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2 px-2">
+                            <div class="col-3 d-flex justify-content-center">
+                                <div class="input-group">
+                                    <input class="form-control py-2 border-right-0 border" type="date">
+                                </div>
+                                <p class="mt-2 mx-2">To</p>
+                                <div class="input-group">
+                                    <input class="form-control py-2 border-right-0 border" type="date">
+                                </div>
+                            </div>
+                            <div class="col-9 d-flex justify-content-center" style="font-size: 16px;">
+                                <p class="mr-2 mt-2">Search [Above Checked Items] & </p>
+                                <div class="form-check mb-2 mr-sm-2 mt-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                    <label class="form-check-label" for="inlineFormCheck">Recycled [Deleted]</label>
+                                </div>
+                                <div class="form-check mb-2 mr-sm-2 mt-2">
+                                    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                    <label class="form-check-label" for="inlineFormCheck">Archived [Older
+                                        Versions]</label>
+                                </div>
+                                <p class="mr-2 mt-2">Filter (Report) =</p>
+                                <div class="form-check mt-2 mr-2">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                       Include
+                                    </label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Exclude
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-4">
+                                <div class="form-group  d-flex">
+                                    <label for="exampleFormControlSelect1">DateRange</label>
+                                    <select class="form-control form-control-sm mx-2" id="daterangesearch">
+                                        <option></option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                    <button class="btn btn-secondary btn-sm mr-1"><i class="fa-solid fa-floppy-disk"></i></button>
+                                    <button class="btn btn-primary btn-sm"><i class="fa-solid fa-x"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group d-flex">
+                                    <select class="form-control mr-2" id="daterangesearch">
+                                        <option></option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                    <button class="btn btn-secondary btn-sm mr-1"><i class="fa-solid fa-floppy-disk"></i></button>
+                                    <button class="btn btn-primary btn-sm"><i class="fa-solid fa-x"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group d-flex">
+                                    <select class="form-control mr-2" id="daterangesearch">
+                                        <option></option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                    <button class="btn btn-secondary btn-sm mr-1"><i class="fa-solid fa-floppy-disk"></i></button>
+                                    <button class="btn btn-primary btn-sm"><i class="fa-solid fa-x"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-4">
+                                <div class="form-group  d-flex">
+                                    <label for="exampleFormControlSelect1">Report</label>
+                                    <select class="form-control form-control-sm mx-2" id="daterangesearch">
+                                        <option></option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                    <button class="btn btn-secondary btn-sm mr-1"><i class="fa-solid fa-floppy-disk"></i></button>
+                                    <button class="btn btn-primary btn-sm"><i class="fa-solid fa-x"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-primary btn-sm">Default View</button>
+                                <button class="btn btn-secondary btn-sm">Print</button>
+                                <button class="btn btn-secondary btn-sm">E-Mail</button>
+                                <button class="btn btn-secondary btn-sm">Load</button>
+                            </div>
+                            <div class="col-4 text-center"> 
+                                <label for="exampleFormControlSelect1">Load Invoice</label>
+                                <button class="btn btn-primary btn-sm ml-2 btn-invoice">Invoice</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                    </div>
+                                    <div class="card-body card-body-bottom">
+
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                    </div>
+                                    <div class="card-body card-body-bottom">
+
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                    </div>
+                                    <div class="card-body card-body-bottom">
+
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                    </div>
+                                    <div class="card-body card-body-bottom">
+
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+
+.card-body.card-body-inside{
+    height: 350px;
+    overflow-y: scroll;
+    font-size: 12px;
+}
+
+.card-body-bottom{
+    height: 300px;
+}
+
+.card-header.card-header-top{
+    background-color: aliceblue!important;
+}
+
+.btn-invoice{
+    padding-right: 60px;
+    padding-left: 60px;
+}
